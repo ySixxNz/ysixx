@@ -24,6 +24,8 @@ body {
   border-radius: 15px;
   box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.08);
   animation: fadeIn 0.8s ease-in-out;
+  position: relative;
+  z-index: 2;
 }
 
 @keyframes fadeIn {
@@ -102,7 +104,7 @@ h2 {
 }
 
 .btn {
-  background: linear-gradient(135deg, #222, #444);
+  background: rgba(255, 255, 255, 0.1);
   color: #fff;
   text-decoration: none;
   padding: 14px;
@@ -110,34 +112,72 @@ h2 {
   font-size: 1rem;
   font-weight: bold;
   transition: 0.3s ease;
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   overflow: hidden;
+  gap: 10px;
+  border: 0px solid transparent;
 }
 
 .btn::before {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
-  transform: translate(-50%, -50%) scale(0);
-  transition: transform 0.5s ease;
-}
-
-.btn:hover {
-  background: linear-gradient(135deg, #333, #555);
-  transform: scale(1.05);
-  box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.2);
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #FF00CC, #3333FF, #00ffcc);
+  z-index: -1;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .btn:hover::before {
-  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.btn .icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.btn .text {
+  transition: transform 0.3s ease;
+}
+
+.btn:hover .icon {
+  transform: scale(1.2);
+}
+
+.btn:hover .text {
+  transform: translateX(5px);
+}
+
+.btn.instagram {
+  background: linear-gradient(135deg, #833AB4, #FD1D1D, #fcb045);
+}
+
+.btn.github {
+  background: linear-gradient(135deg, #333, #6e5494);
+}
+
+.btn.discord {
+  background: linear-gradient(135deg, #7289da, #4e5d94);
+}
+
+.btn.spotify {
+  background: linear-gradient(135deg, #1db954, #1ed760);
+}
+
+.btn.youtube {
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+}
+
+.btn.server {
+  background: linear-gradient(135deg, #7289da, #4e5d94);
 }
 
 .notification {
@@ -153,8 +193,18 @@ h2 {
   box-shadow: 0px 4px 15px rgba(56, 59, 84, 0.5);
   opacity: 0;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 3;
 }
 
 .notification.show {
   opacity: 1;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
