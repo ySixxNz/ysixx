@@ -128,7 +128,7 @@ h2 {
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(45deg, #FF00CC, #3333FF, #00ffcc);
+  background: linear-gradient(45deg, #ff00cc, #3333ff, #00ffcc);
   z-index: -1;
   border-radius: 10px;
   opacity: 0;
@@ -157,7 +157,7 @@ h2 {
 }
 
 .btn.instagram {
-  background: linear-gradient(135deg, #833AB4, #FD1D1D, #fcb045);
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
 }
 
 .btn.github {
