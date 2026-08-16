@@ -1,117 +1,124 @@
 <!DOCTYPE html>
-
-<html lang="pt">
-
+<html lang="pt-br">
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>About ySixx</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="icon" href="six.jpg" type="image/jpg">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08080d">
+  <title>ySixx</title>
+  <link rel="icon" href="six.jpg" type="image/jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <div class="curtain" aria-hidden="true">
+    <i class="fa-solid fa-yin-yang curtain-mark"></i>
+  </div>
 
-    <div class="container">
+  <canvas id="stars"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="spotlight" aria-hidden="true"></div>
 
-        <img src="six.jpg" alt="Six" class="profile-pic">
+  <div class="aurora" aria-hidden="true">
+    <span class="orb orb-gold"></span>
+    <span class="orb orb-violet"></span>
+    <span class="orb orb-rose"></span>
+  </div>
 
-        <h1>ySixx</h1>
+  <main class="card">
+    <span class="kanji-mark" aria-hidden="true">愛</span>
+    <span class="shine" aria-hidden="true"></span>
+    <span class="corner corner-tl" aria-hidden="true"></span>
+    <span class="corner corner-tr" aria-hidden="true"></span>
+    <span class="corner corner-bl" aria-hidden="true"></span>
+    <span class="corner corner-br" aria-hidden="true"></span>
 
-        <div class="section">
-
-            <h2>Socials</h2>
-
-            <div class="links">
-
-                <a href="https://www.instagram.com/ysixx7z" class="btn instagram">
-
-                    <span class="icon"><i class="fab fa-instagram"></i></span>
-
-                    <span class="text">Instagram</span>
-
-                </a>
-
-                <a href="https://github.com/ySixxNz" class="btn github">
-
-                    <span class="icon"><i class="fab fa-github"></i></span>
-
-                    <span class="text">GitHub</span>
-
-                </a>
-
-                <a href="https://discord.com/users/712520207029108787" class="btn discord">
-
-                    <span class="icon"><i class="fab fa-discord"></i></span>
-
-                    <span class="text">Discord</span>
-
-                </a>
-
-                <a href="https://open.spotify.com/user/l9wyzeq1lgwaen0en60wpofjn" class="btn spotify">
-
-                    <span class="icon"><i class="fab fa-spotify"></i></span>
-
-                    <span class="text">Spotify</span>
-
-                </a>
-
-                <a href="https://youtube.com/@ysixxnz" class="btn youtube">
-
-                    <span class="icon"><i class="fab fa-youtube"></i></span>
-
-                    <span class="text">YouTube</span>
-
-                </a>
-
-            </div>
-
+    <div class="card-content">
+      <header class="identity">
+        <div class="avatar-ring">
+          <img src="six.jpg" alt="Foto de perfil de ySixx" class="avatar">
         </div>
-
-        <div class="section">
-
-            <h2>Discord Servers</h2>
-
-            <div class="links">
-
-                <a href="https://discord.gg/NzN4eKWx5d" class="btn server">
-
-                    <span class="icon"><i class="fas fa-users"></i></span>
-
-                    <span class="text">Six Hub Community</span>
-
-                </a>
-
-                <a href="https://discord.gg/eCdWT2qtGy" class="btn server">
-
-                    <span class="icon"><i class="fas fa-users"></i></span>
-
-                    <span class="text">Enigma Community</span>
-
-                </a>
-
-            </div>
-
+        <p class="handle">@ysixx</p>
+        <h1 class="name" aria-label="ySixx"><span class="letters"></span></h1>
+        <div class="status" role="img" aria-label="símbolo de yin yang, equilíbrio">
+          <i class="fa-solid fa-yin-yang status-glyph" aria-hidden="true"></i>
         </div>
+      </header>
 
+      <section class="group">
+        <div class="eyebrow-row"><span class="eyebrow">redes</span></div>
+        <div class="btn-grid">
+          <a class="btn" style="--accent:#dd2a7b" href="https://www.instagram.com/ysixx7z" target="_blank" rel="noopener">
+            <span class="btn-face">
+              <i class="fa-brands fa-instagram btn-icon" aria-hidden="true"></i>
+              <span class="btn-label">Instagram</span>
+              <i class="fa-solid fa-arrow-up-right-from-square btn-arrow" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a class="btn" style="--accent:#c9cbd4" href="https://github.com/ySixxNz" target="_blank" rel="noopener">
+            <span class="btn-face">
+              <i class="fa-brands fa-github btn-icon" aria-hidden="true"></i>
+              <span class="btn-label">GitHub</span>
+              <i class="fa-solid fa-arrow-up-right-from-square btn-arrow" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a class="btn" style="--accent:#5865f2" href="https://discord.com/users/712520207029108787" target="_blank" rel="noopener">
+            <span class="btn-face">
+              <i class="fa-brands fa-discord btn-icon" aria-hidden="true"></i>
+              <span class="btn-label">Discord</span>
+              <i class="fa-solid fa-arrow-up-right-from-square btn-arrow" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a class="btn" style="--accent:#1db954" href="https://open.spotify.com/user/l9wyzeq1lgwaen0en60wpofjn" target="_blank" rel="noopener">
+            <span class="btn-face">
+              <i class="fa-brands fa-spotify btn-icon" aria-hidden="true"></i>
+              <span class="btn-label">Spotify</span>
+              <i class="fa-solid fa-arrow-up-right-from-square btn-arrow" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a class="btn" style="--accent:#ff0033" href="https://youtube.com/@ysixxnz" target="_blank" rel="noopener">
+            <span class="btn-face">
+              <i class="fa-brands fa-youtube btn-icon" aria-hidden="true"></i>
+              <span class="btn-label">YouTube</span>
+              <i class="fa-solid fa-arrow-up-right-from-square btn-arrow" aria-hidden="true"></i>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <section class="group">
+        <div class="eyebrow-row"><span class="eyebrow">comunidades</span></div>
+        <div class="btn-grid">
+          <a class="btn" style="--accent:#5865f2" href="https://discord.gg/NzN4eKWx5d" target="_blank" rel="noopener">
+            <span class="btn-face">
+              <i class="fa-solid fa-users btn-icon" aria-hidden="true"></i>
+              <span class="btn-label">Six Hub Community</span>
+              <i class="fa-solid fa-arrow-up-right-from-square btn-arrow" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a class="btn" style="--accent:#9b6bff" href="https://discord.gg/eCdWT2qtGy" target="_blank" rel="noopener">
+            <span class="btn-face">
+              <i class="fa-solid fa-users btn-icon" aria-hidden="true"></i>
+              <span class="btn-label">Enigma Community</span>
+              <i class="fa-solid fa-arrow-up-right-from-square btn-arrow" aria-hidden="true"></i>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <footer class="foot">
+        <p>feito por ySixx</p>
+      </footer>
     </div>
+  </main>
 
-    <div id="notification" class="notification"></div>
+  <div id="notification" class="notification" role="status" aria-live="polite">
+    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+    <span class="notification-text"></span>
+  </div>
 
-    <canvas id="a1"></canvas>
-
-    <script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
-
 </html>
